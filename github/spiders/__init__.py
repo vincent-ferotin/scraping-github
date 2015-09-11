@@ -214,8 +214,46 @@ class GitHubSpider(Spider):
         crawled_infos = response.meta['crawled_infos']
         project = response.meta['project']
 
+        item_xpath = '//a[@class="js-directory-link js-navigation-open"]'
+        dir_items = set(response.xpath('{0}/text()'.format(item_xpath))\
+                                .extract())
+
+        for filename in project.dirs[crawled_infos.current_dir]:
+            if filename not in dir_items:
+                self.logger.error(('NOT FIND `{0}` file in `{1}` directory '
+                                   '`{2}`! Skipping item...'
+                                   '').format(filename, project.short_url,
+                                              crawled_infos.current_dir))
+                continue
+
+            _crawled_infos = \
+                crawled_infos.clone_and_update(filename=filename)
+
+            link_xpath = '{0}[text()="{1}"]'.format(item_xpath, filename)
+            next_url = list(extract_links(response, xpaths=link_xpath))[0]
+
+            yield Request(next_url,
+                          callback=self.parse_file,
+                          meta={
+                            'crawled_infos': _crawled_infos,
+                            'project': project,
+                            })
+
+    def parse_file(self, response):
+        """Parse project's given file.
+
+        :meta crawled_infos:    currently crawled informations
+        :type crawled_infos:    :class:`CrawledInfos`
+        :meta project:          current crawled project
+        :type project:          :class:`Project`
+
+        """
+        crawled_infos = response.meta['crawled_infos']
+        project = response.meta['project']
+
         # FIXME: debugging
-        self.logger.debug(('NOW ON `{0}` / `{1}`...'
+        self.logger.debug(('NOW ON `{0}` / `{1}` / `{2}`...'
                            '').format(crawled_infos.project_name,
-                                      crawled_infos.current_dir))
+                                      crawled_infos.current_dir,
+                                      crawled_infos.filename))
         ##################
