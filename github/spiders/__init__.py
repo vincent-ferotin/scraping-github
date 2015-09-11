@@ -178,7 +178,44 @@ class GitHubSpider(Spider):
         crawled_infos = response.meta['crawled_infos']
         project = response.meta['project']
 
+        item_xpath = '//a[@class="js-directory-link js-navigation-open"]'
+        dir_items = set(response.xpath('{0}/text()'.format(item_xpath))\
+                                .extract())
+
+        for dirname in project.dirs:
+            if dirname not in dir_items:
+                self.logger.error(('NOT FIND `{0}` directory in repo. `{1}`! '
+                                   'Skipping item...'
+                                   '').format(dirname, project.short_url))
+                continue
+
+            _crawled_infos = \
+                crawled_infos.clone_and_update(current_dir=dirname)
+
+            link_xpath = '{0}[text()="{1}"]'.format(item_xpath, dirname)
+            next_url = list(extract_links(response, xpaths=link_xpath))[0]
+
+            yield Request(next_url,
+                          callback=self.parse_directory,
+                          meta={
+                            'crawled_infos': _crawled_infos,
+                            'project': project,
+                            })
+
+    def parse_directory(self, response):
+        """Parse project's given directory.
+
+        :meta crawled_infos:    currently crawled informations
+        :type crawled_infos:    :class:`CrawledInfos`
+        :meta project:          current crawled project
+        :type project:          :class:`Project`
+
+        """
+        crawled_infos = response.meta['crawled_infos']
+        project = response.meta['project']
+
         # FIXME: debugging
-        self.logger.debug(('NOW ON `{0}` project...'
-                           '').format(crawled_infos.project_name))
+        self.logger.debug(('NOW ON `{0}` / `{1}`...'
+                           '').format(crawled_infos.project_name,
+                                      crawled_infos.current_dir))
         ##################
