@@ -10,7 +10,12 @@ from collections import (
     )
 
 from scrapy import Spider
-from scrapy.http import FormRequest
+from scrapy.http import (
+    FormRequest,
+    Request,
+    )
+
+from github.utils import extract_links
 
 
 # Storage utilities  ---------------------------------------------------------
@@ -136,8 +141,44 @@ class GitHubSpider(Spider):
     def parse_search_results(self, response):
         """Parse `GitHub`'s search results.
         """
-        repo_urls = response.xpath(('//ul[@class="repo-list js-repo-list"]'
-                                     '/li/h3/a/@href')).extract()
-        # FIXME: debugging only
-        self.logger.debug('REPOS URLs: {0}'.format(', '.join(repo_urls)))
-        #######################
+        repo_link_xpath = ('//ul[@class="repo-list js-repo-list"]'
+                           '/li/h3/a')
+        repo_urls = set(response.xpath(('{0}/@href'.format(repo_link_xpath)))\
+                                .extract())
+
+        for project in PROJECTS.itervalues():
+            if project.short_url not in repo_urls:
+                self.logger.error(('NOT FIND {0} in repos. URLs! Skipping '
+                                   'project `{1}`...').format(project.short_url,
+                                                              project.name))
+                continue
+            # else:
+            crawled_infos = CrawledInfos(project_name=project.name)
+
+            link_xpath = '{0}[@href="{1}"]'.format(repo_link_xpath,
+                                                   project.short_url)
+            next_url = list(extract_links(response, xpaths=link_xpath))[0]
+
+            yield Request(next_url,
+                          callback=self.parse_project,
+                          meta={
+                            'crawled_infos': crawled_infos,
+                            'project': project,
+                            })
+
+    def parse_project(self, response):
+        """Parse project's homepage on GitHub.
+
+        :meta crawled_infos:    currently crawled informations
+        :type crawled_infos:    :class:`CrawledInfos`
+        :meta project:          current crawled project
+        :type project:          :class:`Project`
+
+        """
+        crawled_infos = response.meta['crawled_infos']
+        project = response.meta['project']
+
+        # FIXME: debugging
+        self.logger.debug(('NOW ON `{0}` project...'
+                           '').format(crawled_infos.project_name))
+        ##################
