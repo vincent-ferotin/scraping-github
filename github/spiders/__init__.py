@@ -3,16 +3,20 @@
 """
 from __future__ import unicode_literals
 
+from pprint import pformat
 from copy import copy
 from collections import (
     OrderedDict,
     namedtuple,
     )
 
-from scrapy import Spider
 from scrapy.http import (
     FormRequest,
     Request,
+    )
+from scrapy import (
+    Spider,
+    signals,
     )
 
 from github.utils import extract_links
@@ -137,9 +141,37 @@ class GitHubSpider(Spider):
         self.requests = []
         self.responses = []
 
+    def spider_opened(self):
+        """Do some tasks at spider opening (view it as a post-init?).
+
+        .. warning:: This method *must* be called at top of :meth:`parse`!
+
+        """
+        # FIXME: how to use (something like) this, instead of manually calling
+        # :meth:`log_out`?
+        self.crawler.signals.connect(self.show_tree, signals.spider_idle)
+
+    def show_tree(self):
+        """Show crawled tree.
+        """
+        requested_urls = [request.url for request in self.requests]
+
+        self.logger.info('Requests:\n{0}'.format(pformat(requested_urls)))
+
+        respond_urls = [response.request.url for response in self.responses]
+        self.logger.info('Responses:\n{0}'.format(pformat(respond_urls)))
+
     def parse(self, response):
         """Parse `GitHub`'s homepage.
         """
+        # FIXME? Ideally, we should use signals, specifically
+        # `scrapy.signals.spider_opened`. But signal manager is only available
+        # through :attr:`self.crawler.signals`, which instantiate *after*
+        # spider is initialized through :meth:`__init__` (where registring
+        # :meth:`spider_opened` to it should take place).
+        # It seems to be a "chicken and egg" problem...
+        self.spider_opened()
+
         search_form_xpath = '//form[@class="js-site-search-form"]'
         yield FormRequest.from_response(response,
                                         callback=self.parse_search_results,
