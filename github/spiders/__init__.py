@@ -129,6 +129,14 @@ class GitHubSpider(Spider):
     allowed_domains = ['github.com']
     start_urls = ['https://github.com/']
 
+    def __init__(self, *args, **kwargs):
+        """Spider initialization.
+        """
+        Spider.__init__(self, *args, **kwargs)
+
+        self.requests = []
+        self.responses = []
+
     def parse(self, response):
         """Parse `GitHub`'s homepage.
         """
@@ -159,12 +167,14 @@ class GitHubSpider(Spider):
                                                    project.short_url)
             next_url = list(extract_links(response, xpaths=link_xpath))[0]
 
-            yield Request(next_url,
-                          callback=self.parse_project,
-                          meta={
-                            'crawled_infos': crawled_infos,
-                            'project': project,
-                            })
+            request = Request(next_url,
+                              callback=self.parse_project,
+                              meta={
+                                'crawled_infos': crawled_infos,
+                                'project': project,
+                                })
+            self.requests.append(request)
+            yield request
 
     def parse_project(self, response):
         """Parse project's homepage on GitHub.
@@ -175,6 +185,8 @@ class GitHubSpider(Spider):
         :type project:          :class:`Project`
 
         """
+        self.responses.append(response)
+
         crawled_infos = response.meta['crawled_infos']
         project = response.meta['project']
 
@@ -195,12 +207,14 @@ class GitHubSpider(Spider):
             link_xpath = '{0}[text()="{1}"]'.format(item_xpath, dirname)
             next_url = list(extract_links(response, xpaths=link_xpath))[0]
 
-            yield Request(next_url,
-                          callback=self.parse_directory,
-                          meta={
-                            'crawled_infos': _crawled_infos,
-                            'project': project,
-                            })
+            request = Request(next_url,
+                              callback=self.parse_directory,
+                              meta={
+                                'crawled_infos': _crawled_infos,
+                                'project': project,
+                                })
+            self.requests.append(request)
+            yield request
 
     def parse_directory(self, response):
         """Parse project's given directory.
@@ -211,6 +225,8 @@ class GitHubSpider(Spider):
         :type project:          :class:`Project`
 
         """
+        self.responses.append(response)
+
         crawled_infos = response.meta['crawled_infos']
         project = response.meta['project']
 
@@ -232,12 +248,14 @@ class GitHubSpider(Spider):
             link_xpath = '{0}[text()="{1}"]'.format(item_xpath, filename)
             next_url = list(extract_links(response, xpaths=link_xpath))[0]
 
-            yield Request(next_url,
-                          callback=self.parse_file,
-                          meta={
-                            'crawled_infos': _crawled_infos,
-                            'project': project,
-                            })
+            request = Request(next_url,
+                              callback=self.parse_file,
+                              meta={
+                                'crawled_infos': _crawled_infos,
+                                'project': project,
+                                })
+            self.requests.append(request)
+            yield request
 
     def parse_file(self, response):
         """Parse project's given file.
@@ -248,12 +266,9 @@ class GitHubSpider(Spider):
         :type project:          :class:`Project`
 
         """
+        self.responses.append(response)
+
         crawled_infos = response.meta['crawled_infos']
         project = response.meta['project']
 
-        # FIXME: debugging
-        self.logger.debug(('NOW ON `{0}` / `{1}` / `{2}`...'
-                           '').format(crawled_infos.project_name,
-                                      crawled_infos.current_dir,
-                                      crawled_infos.filename))
-        ##################
+        pass
