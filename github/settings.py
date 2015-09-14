@@ -85,3 +85,11 @@ RANDOMIZE_DOWNLOAD_DELAY = False
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# "Depth-first" or "breadth-first" order.
+# See http://doc.scrapy.org/en/1.0/faq.html#does-scrapy-crawl-in-breadth-first-or-depth-first-order
+# Default (as commented) is "depth-first".
+# Uncomment for "breadth-first".
+#DEPTH_PRIORITY = 1
+#SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
+#SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
