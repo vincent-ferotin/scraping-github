@@ -13,12 +13,12 @@ and outputs both requests and responses proceeded orders,
 allowing to reconstruct walked graph.
 
 Actually crawling orders for both requests and responses are stored (by hand)
-in graphs in ``tree/`` directory (files created with `Inkscape
-<http://www.inkscape.org/>`_\ ). They exist for :ref:`two configurations
-<configurations>` of `Scrapy`,
-default one (files named ``github-tree-*-depth_priority_0``) described
+in graphs in ``tree/`` directory (SVG files created with `Inkscape
+<http://www.inkscape.org/>`_\ and exported as PNG). They exist for
+:ref:`two configurations <configurations>` of `Scrapy`,
+default one (files named ``github-tree-*-depth_priority_0.*``) described
 as configuration for "depth-first" order, and alternative configuration
-(files named ``github-tree-*-depth_priority_1``) for "breadth-first" order.
+(files named ``github-tree-*-depth_priority_1.*``) for "breadth-first" order.
 
 
 .. _structure:
@@ -37,13 +37,13 @@ and is defined in project as :data:`github.spiders.PROJECTS`\ ::
      \_ github's search page
          \_ scrapy/scrapy
              \_ docs/
-                 \_ README,
+                 \_ README
                  \_ conf.py
                  \_ faq.rst
              \_ scrapy/
                  \_ VERSION
                  \_ spider.py
-             \_ extras
+             \_ extras/
                  \_ scrapy.1
                  \_ scrapy_zsh_completion
          \_ scrapy/scrapyd
@@ -55,7 +55,7 @@ and is defined in project as :data:`github.spiders.PROJECTS`\ ::
                  \_ VERSION
                  \_ app.py
                  \_ utils.py
-             \_ extras
+             \_ extras/
                  \_ test-scrapyd.sh
          \_ scrapinghub/scrapylib
              \_ scrapylib/
