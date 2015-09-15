@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="github-tree-responses.svg"
+   sodipodi:docname="github-tree-responses-depth_priority_0.svg"
    inkscape:export-filename="/tmp/path4358-7-2.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -643,6 +643,22 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-6-3"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4367-1-99"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -651,15 +667,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="5508.8683"
-     inkscape:cy="-18.288717"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="3197.2734"
+     inkscape:cy="814.4708"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1168"
      inkscape:window-height="982"
-     inkscape:window-x="-5"
+     inkscape:window-x="0"
      inkscape:window-y="31"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -674,7 +690,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -683,68 +699,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(913.3725,-16.036299)">
-    <g
-       id="g4308"
-       transform="translate(1937.4831,93.88838)">
-      <rect
-         ry="3.2305447e-06"
-         y="66.647919"
-         x="313.79462"
-         height="74.285713"
-         width="182.14285"
-         id="rect4136"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4138"
-         y="83.790771"
-         x="330.47397"
-         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:15px"
-           y="83.790771"
-           x="330.47397"
-           id="tspan4140"
-           sodipodi:role="line">GitHub's homepage</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4138-3"
-         y="104.30835"
-         x="336.33578"
-         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic'"
-           y="104.30835"
-           x="336.33578"
-           id="tspan4140-8"
-           sodipodi:role="line">https://github.com/</tspan></text>
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path4179"
-         d="m 314.15177,88.076489 181.42857,0"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path4179-8"
-         d="m 314.15177,113.07649 181.42857,0"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="371.53598"
-         y="133.60558"
-         id="text19935"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan19937"
-           x="371.53598"
-           y="133.60558"
-           style="font-size:20px">resp.: <tspan
-   style="font-weight:bold"
-   id="tspan19939">0</tspan></tspan></text>
-    </g>
     <g
        id="g4348"
        transform="translate(68.527932,168.14946)">
@@ -2759,6 +2713,140 @@
            sodipodi:role="line">resp.: <tspan
    id="tspan19939-5"
    style="font-weight:bold">2</tspan></tspan></text>
+    </g>
+    <g
+       id="g4308-1"
+       transform="translate(1929.5638,95.430709)">
+      <rect
+         ry="3.2289038e-06"
+         y="66.666786"
+         x="314.66171"
+         height="74.247978"
+         width="196.24725"
+         id="rect4136-8"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.03773248;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-4"
+         y="83.790771"
+         x="332.3288"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:15px"
+           y="83.790771"
+           x="332.3288"
+           id="tspan4140-6"
+           sodipodi:role="line">GitHub's search page</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-5"
+         y="104.30835"
+         x="321.61713"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic'"
+           y="104.30835"
+           x="321.61713"
+           id="tspan4140-8-9"
+           sodipodi:role="line">https://github.com/search</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-0"
+         d="m 315.04652,88.084471 195.47766,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.03773248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-8-9"
+         d="m 315.04652,113.07177 195.47766,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.03773248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="380.55997"
+         y="132.09357"
+         id="text19935-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan19937-5"
+           x="380.55997"
+           y="132.09357"
+           style="font-size:20px">resp.: <tspan
+   style="font-weight:bold"
+   id="tspan19939-6">0</tspan></tspan></text>
+    </g>
+    <g
+       id="g4308-9"
+       transform="translate(1938.1368,-46.332622)">
+      <rect
+         ry="3.2305447e-06"
+         y="66.647919"
+         x="314.64285"
+         height="74.285713"
+         width="182.14285"
+         id="rect4136-9"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-5"
+         y="83.790771"
+         x="331.3222"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:15px"
+           y="83.790771"
+           x="331.3222"
+           id="tspan4140-86"
+           sodipodi:role="line">GitHub's homepage</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-0"
+         y="104.30835"
+         x="337.18402"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic'"
+           y="104.30835"
+           x="337.18402"
+           id="tspan4140-8-3"
+           sodipodi:role="line">https://github.com/</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-82"
+         d="m 315,88.076489 181.42857,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-8-1"
+         d="m 315,113.07649 181.42857,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="367.64178"
+         y="131.52692"
+         id="text19935-1"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan19937-4"
+           x="367.64178"
+           y="131.52692"
+           style="font-size:20px">resp.: <tspan
+   style="font-weight:bold"
+   id="tspan19939-4">-1</tspan></tspan></text>
+    </g>
+    <g
+       id="g4855-0"
+       transform="translate(1910.2794,-195.90405)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4358-7-1"
+         d="m 432.14286,295.02362 0,60.63845"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-6-3)"
+         sodipodi:nodetypes="cc" />
     </g>
   </g>
 </svg>

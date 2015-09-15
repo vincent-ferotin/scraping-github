@@ -26,47 +26,49 @@ as configuration for "depth-first" order, and alternative configuration
 Scraped structure
 -----------------
 
-Project scraps three `GitHub`\ 's projects (``scrapy/scrapy``, ``scrapy/scrapyd``,
-``scrapinghub/scrapylib``) and in each project scraps 3 directories,
+Project crawls three `GitHub`\ 's projects (``scrapy/scrapy``, ``scrapy/scrapyd``,
+``scrapinghub/scrapylib``) and in each project crawls two or three directories,
 then in each of these directories one, two or three files.
 
 Complete crawled structure follows,
 and is defined in project as :data:`github.spiders.PROJECTS`\ ::
 
     github.com
-     \_ scrapy/scrapy
-         \_ docs/
-             \_ README,
-             \_ conf.py
-             \_ faq.rst
-         \_ scrapy/
-             \_ VERSION
-             \_ spider.py
-         \_ extras
-             \_ scrapy.1
-             \_ scrapy_zsh_completion
-     \_ scrapy/scrapyd
-         \_ docs/
-             \_ conf.py
-             \_ index.rst
-             \_ install.rst
-         \_ scrapyd/
-             \_ VERSION
-             \_ app.py
-             \_ utils.py
-         \_ extras
-             \_ test-scrapyd.sh
-     \_ scrapinghub/scrapylib
-         \_ scrapylib/
-             \_ redisqueue.py
-             \_ links.py
-         \_ tests/
-             \_ test_links.py
-             \_ test_magicfields.py
+     \_ github's search page
+         \_ scrapy/scrapy
+             \_ docs/
+                 \_ README,
+                 \_ conf.py
+                 \_ faq.rst
+             \_ scrapy/
+                 \_ VERSION
+                 \_ spider.py
+             \_ extras
+                 \_ scrapy.1
+                 \_ scrapy_zsh_completion
+         \_ scrapy/scrapyd
+             \_ docs/
+                 \_ conf.py
+                 \_ index.rst
+                 \_ install.rst
+             \_ scrapyd/
+                 \_ VERSION
+                 \_ app.py
+                 \_ utils.py
+             \_ extras
+                 \_ test-scrapyd.sh
+         \_ scrapinghub/scrapylib
+             \_ scrapylib/
+                 \_ redisqueue.py
+                 \_ links.py
+             \_ tests/
+                 \_ test_links.py
+                 \_ test_magicfields.py
 
 For each parent node, its direct children order is specified above as top-bottom,
 e.g. crawler at ``scrapy/scrapy`` project and ``docs/`` directory will request
 ``README`` first, then ``conf.py`` and finally ``faq.rst``.
+This order is represented in figures ``tree/github-tree*`` as left-to-right.
 
 
 .. _configurations:

@@ -640,6 +640,22 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-6-3"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4367-1-99"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -648,14 +664,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="3330.9488"
-     inkscape:cy="654.56223"
+     inkscape:zoom="1.979899"
+     inkscape:cx="3343.948"
+     inkscape:cy="870.64536"
      inkscape:document-units="px"
-     inkscape:current-layer="g4308"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="987"
+     inkscape:window-height="981"
      inkscape:window-x="0"
      inkscape:window-y="31"
      inkscape:window-maximized="1"
@@ -671,7 +687,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -682,51 +698,51 @@
      transform="translate(913.3725,-16.036299)">
     <g
        id="g4308"
-       transform="translate(1937.4831,93.88838)">
+       transform="translate(1929.4831,93.88838)">
       <rect
-         ry="3.2305447e-06"
-         y="66.647919"
-         x="314.64285"
-         height="74.285713"
-         width="182.14285"
+         ry="3.2289038e-06"
+         y="66.666786"
+         x="314.66171"
+         height="74.247978"
+         width="196.24725"
          id="rect4136"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.03773248;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text4138"
          y="83.790771"
-         x="331.3222"
+         x="332.3288"
          style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            style="font-size:15px"
            y="83.790771"
-           x="331.3222"
+           x="332.3288"
            id="tspan4140"
-           sodipodi:role="line">GitHub's homepage</tspan></text>
+           sodipodi:role="line">GitHub's search page</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text4138-3"
          y="104.30835"
-         x="337.18402"
+         x="321.61713"
          style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic'"
            y="104.30835"
-           x="337.18402"
+           x="321.61713"
            id="tspan4140-8"
-           sodipodi:role="line">https://github.com/</tspan></text>
+           sodipodi:role="line">https://github.com/search</tspan></text>
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4179"
-         d="m 315,88.076489 181.42857,0"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         d="m 315.04652,88.084471 195.47766,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.03773248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4179-8"
-         d="m 315,113.07649 181.42857,0"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         d="m 315.04652,113.07177 195.47766,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.03773248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
        id="g4348"
@@ -2337,5 +2353,63 @@
        d="m 3899.1945,601.0396 381.8377,208.08121"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-6-6-1-7-3)"
        sodipodi:nodetypes="cc" />
+    <g
+       id="g4308-9"
+       transform="translate(1938.0561,-47.874952)">
+      <rect
+         ry="3.2305447e-06"
+         y="66.647919"
+         x="314.64285"
+         height="74.285713"
+         width="182.14285"
+         id="rect4136-9"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-5"
+         y="83.790771"
+         x="331.3222"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:15px"
+           y="83.790771"
+           x="331.3222"
+           id="tspan4140-86"
+           sodipodi:role="line">GitHub's homepage</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-0"
+         y="104.30835"
+         x="337.18402"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;font-family:Sans;-inkscape-font-specification:'Sans Bold Italic'"
+           y="104.30835"
+           x="337.18402"
+           id="tspan4140-8-3"
+           sodipodi:role="line">https://github.com/</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-82"
+         d="m 315,88.076489 181.42857,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4179-8-1"
+         d="m 315,113.07649 181.42857,0"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4855-0"
+       transform="translate(1910.1989,-197.44638)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4358-7-1"
+         d="m 432.14286,295.02362 0,60.63845"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-6-3)"
+         sodipodi:nodetypes="cc" />
+    </g>
   </g>
 </svg>
