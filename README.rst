@@ -12,9 +12,9 @@ is actually a **breadth-first order**.
 and outputs both requests and responses proceeded orders,
 allowing to reconstruct walked graph.
 
-Actually crawling orders for both requests and responses are stored (by hand)
-in graphs in ``tree/`` directory (SVG files created with `Inkscape
-<http://www.inkscape.org/>`_\ and exported as PNG). They exist for
+Actually crawling orders for both requests and responses are figured (by hand)
+as graphs in ``tree/`` directory (SVG files created with `Inkscape
+<http://www.inkscape.org/>`_ and exported as PNG). They exist for
 :ref:`two configurations <configurations>` of `Scrapy`,
 default one (files named ``github-tree-*-depth_priority_0.*``) described
 as configuration for "depth-first" order, and alternative configuration
@@ -26,8 +26,11 @@ as configuration for "depth-first" order, and alternative configuration
 Scraped structure
 -----------------
 
-Project crawls three `GitHub`\ 's projects (``scrapy/scrapy``, ``scrapy/scrapyd``,
-``scrapinghub/scrapylib``) and in each project crawls two or three directories,
+Project crawls three `GitHub`\ 's projects
+(`scrapy/scrapy <https://github.com/scrapy/scrapy>`_,
+`scrapy/scrapyd <https://github.com/scrapy/scrapyd>`_,
+`scrapinghub/scrapylib <https://github.com/scrapinghub/scrapylib>`_)
+and in each project crawls two or three directories,
 then in each of these directories one, two or three files.
 
 Complete crawled structure follows,
