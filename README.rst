@@ -87,3 +87,6 @@ To switch to "breadth-first" order, uncomment last lines as such::
     SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
     SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 
+To ensure that requests are proceed without any randomized delay, in the order
+they are emitted by spider functions, :data:`RANDOMIZE_DOWNLOAD_DELAY` is set to
+``False``.
