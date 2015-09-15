@@ -90,3 +90,32 @@ To switch to "breadth-first" order, uncomment last lines as such::
 To ensure that requests are proceed without any randomized delay, in the order
 they are emitted by spider functions, :data:`RANDOMIZE_DOWNLOAD_DELAY` is set to
 ``False``.
+
+
+Collecting requests and responses
+---------------------------------
+
+In parsing function, requests emitted and responses received are stored
+in spider's :attr:`GitHubSpider.requests` and
+:attr:`GitHubSpider.responses` lists.
+
+Requests are stored just before being emitted by parsing function:
+
+.. code-block:: python
+
+    def parse_directory(self, response):
+        #...
+        for filename in project.dirs[crawled_infos.current_dir]:
+            #...
+            request = Request(...)
+            self.requests.append(request)
+            yield request
+
+Responses are stored at parsing function beginning, with:
+
+.. code-block:: python
+
+    def parse_directory(self, response):
+        self.responses.append(response)
+        #...
+

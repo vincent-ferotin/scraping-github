@@ -152,7 +152,7 @@ class GitHubSpider(Spider):
         self.crawler.signals.connect(self.show_tree, signals.spider_idle)
 
     def show_tree(self):
-        """Show crawled tree.
+        """Show crawled tree's nodes.
         """
         requested_urls = [request.url for request in self.requests]
 
